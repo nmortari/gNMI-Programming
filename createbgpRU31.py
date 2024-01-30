@@ -1,13 +1,22 @@
-#Created by Nick Mortari
-#Technical Marketing Engineer
+# Created by Nick Mortari
+# Technical Marketing Engineer
+# Cisco Systems - Cloud Networking Team
+
+# This Python script uses pyGNMI to remotely configure the BGP service and BGP peering on 2 switches.
+# All the XPaths used here are from the Cisco native model.
+# This script is only a demonstration of how to use gNMI to remotely configure network devices. It should be used as a starting point for further network development.
+
 
 #!/usr/bin/evn python
 
+# https://github.com/akarneliuk/pygnmi/tree/master
 from pygnmi.client import gNMIclient
 import json
 
+# Path to find intermediate CA cert to connect to devices
 CertPath = "/home/nick/gnmic/ca-chain.cert.pem"
 
+# List of devices to configure. All information listed here will be iterated through for each switch.
 DevicesList = [
     {
         "IP":"10.0.1.4",
@@ -45,8 +54,9 @@ DevicesList = [
     }
 ]
 
-
+# BGP instance name
 BGPName="default"
+# BGP network address type
 AddressType="ipv4-ucast"
 
 if __name__ == '__main__':
