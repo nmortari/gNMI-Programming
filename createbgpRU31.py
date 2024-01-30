@@ -16,7 +16,7 @@ import json
 # Path to find intermediate CA cert to connect to devices
 CertPath = "/home/nick/gnmic/ca-chain.cert.pem"
 
-# List of devices to configure. All information listed here will be iterated through for each switch.
+# List of devices to configure. All information listed here will be iterated through for each switch
 DevicesList = [
     {
         "IP":"10.0.1.4",
@@ -47,7 +47,7 @@ DevicesList = [
         "AddressFamilyNetwork":"1.1.1.0/24",
         "BGPNeighbor":"200.0.0.2",
         "NeighborASN":"65000",
-        "NeighborDescription":"RU32 65000",
+        "NeighborDescription":"RU31 65000",
         "UpdateValue":"10",
         "HoldValue":"20",
         "NeighborAddressType":"ipv4-ucast"
