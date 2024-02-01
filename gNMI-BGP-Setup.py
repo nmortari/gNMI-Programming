@@ -3,8 +3,8 @@
 # Cisco Systems - Cloud Networking Team
 
 # This Python script uses pyGNMI to remotely configure the BGP service and BGP peering on 2 switches.
-# All the XPaths used here are from the Cisco native model.
-# This script is only a demonstration of how to use gNMI to remotely configure network devices. It should be used as a starting point for further network development.
+# All XPaths used here are from the Cisco native model.
+# This script is only a demonstration of how to use gNMI to remotely configure network devices. It can be used as a starting point for further network development.
 
 
 #!/usr/bin/evn python
