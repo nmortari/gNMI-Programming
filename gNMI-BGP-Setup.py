@@ -11,7 +11,7 @@
 
 # https://github.com/akarneliuk/pygnmi/tree/master
 from pygnmi.client import gNMIclient
-import json
+import time
 
 # Path to find intermediate CA cert to connect to devices
 CertPath = "/home/nick/gnmic/ca-chain.cert.pem"
@@ -58,6 +58,8 @@ DevicesList = [
 BGPName="default"
 # BGP network address type
 AddressType="ipv4-ucast"
+
+StartTime = time.time()
 
 if __name__ == '__main__':
     for switch in DevicesList:
@@ -155,3 +157,7 @@ if __name__ == '__main__':
             print("Sending Neighbor Address Type...")
             gc.set(update=SetNeighborAddressType)
             print("\n---------------------------------------\n")
+
+EndTime = time.time()-StartTime
+
+print("Script executed in ", round(EndTime, 2), "seconds\n")
